@@ -53,8 +53,8 @@ describe("Five new test in Amazon main page", () =>{
 
     })  
 
-    it("Mocking\Stubbing creation of a new Amazon account", () => {
-        el.hoover().trigger('mouseover');
+    it.only("Mocking\Stubbing creation of a new Amazon account", () => {
+        el.hoover().trigger('mouseover',{force: true})
         el.newAccount().should('be.visible').click({force: true})
         //Create account validation page
         el.createAccount().should('be.visible').invoke('text').should('match', /^\s*Create account\s*$/)
