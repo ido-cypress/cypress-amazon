@@ -1,8 +1,21 @@
 //Task 1
 
-export const navLogo = () => cy.get('#nav-logo-sprites');
-export const navCart = () => cy.get('#nav-cart-count');
+export const navLogo = () => cy.get('#nav-logo-sprites')
+export const navCart = () => cy.get('#nav-cart-count')
 export const navHamburger = () => cy.get('#nav-hamburger-menu')
+export const hoover = () => cy.get('.nav-line-1-container #nav-link-accountList-nav-line-1', { timeout: 10000 })
+export const newAccount = () => cy.get('div#nav-flyout-ya-newCust a[aria-label="New to Amazon? Start here to create an account"]')
+export const createAccount = () => cy.get('h1.a-spacing-small')
+export const yourNameInput = () => cy.get('#ap_customer_name')
+export const email = () => cy.get('input#ap_email')
+export const password = () => cy.get('input#ap_password')
+export const rePassword = () => cy.get('input#ap_password_check')
+export const con = () => cy.get('input#continue')
+export const securityCode = () => cy.get('#cvf-input-code')
+export const signIn = () => cy.get('#nav-flyout-ya-signin .nav-action-signin-button')
+export const signInSubmit = () => cy.get('input#signInSubmit')
+export const navLinkAccount = () => cy.get('#nav-link-accountList-nav-line-1')
+export const dismiss = () => cy.get('input[data-action-type="DISMISS"]')
 
 //Task 2
 export const navShop = () => cy.get('#nav-xshop')
@@ -14,3 +27,22 @@ export const giftCards = () => cy.get('a[data-csa-c-slot-id="nav_cs_3"]')
 export const sell = () => cy.get('a[data-csa-c-slot-id="nav_cs_4"]')
 export const whereStuff = () =>  cy.get(':nth-child(2) > label')
 export const validateButton = () => cy.get('button.fs-button').contains("More in Where's my Stuff")
+
+//Task 3
+export const navFillSearch = () => cy.get('#twotabsearchtextbox')
+export const clickSearchSubmitBtn = () => cy.get('#nav-search-submit-button')
+export const addToCart = () => cy.get('#a-autoid-1-announce')
+export const sideBarCart = () => cy.get('.ewc-subtotal-amount h2')
+export const scissorsValidate = () =>  cy.get('#productTitle')
+export const redBlackBlueScissors = () => cy.get('li[data-csa-c-item-id="B08T1GMKVF"]')
+export const anotherAddToCart = () => cy.get('#add-to-cart-button')
+export const validateAddToCart = () => cy.get('h1.a-size-medium-plus.a-color-base.sw-atc-text.a-text-bold')
+export const proceedToRetailCheckout = () => cy.get('input[name="proceedToRetailCheckout"]')
+export const amazonHome = () => cy.get('a[href="/ref=cs_503_link"]')
+export const cart = () => cy.get('#nav-cart-count-container')
+export const shoppingCartValidation = () => cy.get('h2#sc-active-items-header')
+export const deleteFromCart = ()  => cy.get('input[data-action="delete"]')
+export const increaseItem = () => cy.get('button[data-action="a-stepper-increment"]')
+export const subTotal = () => cy.get('#sc-subtotal-label-activecart')
+export const emptyCart = () => cy.get('h3.sc-your-amazon-cart-is-empty')
+export const decreaseItem = () =>cy.get('button[data-action="a-stepper-decrement"]')

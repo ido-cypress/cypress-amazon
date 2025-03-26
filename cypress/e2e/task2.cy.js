@@ -2,17 +2,20 @@
 
 const el = require('../support/element.js')
 
-describe("Five new test in Amazon main page", () =>{
+describe("Validiate menu and find where is my stuff after click custoer service", () =>{
 
     beforeEach( () => {
         cy.visit("/")
+        cy.wait(3000)
+        cy.clickDismiss()
+        //Validate menu is visible
+        el.navShop().should('be.visible'); 
+
 
     })
 
     it('Menu is visiable with 5 iteams with the correct names', () => {
         
-        //Validate menu is visible
-        el.navShop().should('be.visible'); 
         
         // Expecting 5 main menu items: Today's Deals, Registry,Customer Service, Gift Cards ,Sell
         el.navList().should('have.length', 5); 
@@ -33,11 +36,9 @@ describe("Five new test in Amazon main page", () =>{
         
       });
 
-      it.only("Find where is my stuff in Customer service", () =>{
+      it("Find where is my stuff in Customer service", () =>{
 
-        //Validate menu is visible
-        el.navShop().should('be.visible'); 
-
+        
         //Valide the customer service on the menu
         el.customerService().should('have.text', 'Customer Service')
         .and('have.attr', 'href', '/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice');
